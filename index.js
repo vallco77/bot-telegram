@@ -6,7 +6,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const token = process.env.ID_TOKEN;
 const geminiApiKey = process.env.GEMINI_API_KEY;
 
-const bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(token, { polling: false });
 
 const vercelUrl = process.env.VERCEL_URL; 
 const webhookUrl = `https://${vercelUrl}/${token}`; 
