@@ -1,21 +1,16 @@
 {
-  "name": "node-express-api",
-  "description": "Simple api sample in Node",
-  "version": "1.0.0",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
-  },
-  "author": "",
-  "license": "Apache-2.0",
   "dependencies": {
-    "express": "^4.17.1",
     "@google/generative-ai": "^0.20.0",
     "node-telegram-bot-api": "^0.66.0"
   },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+  "name": "bot-telegram",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
