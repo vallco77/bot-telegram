@@ -1,9 +1,9 @@
 const TelegramBot = require("node-telegram-bot-api");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const express = require("express");
-const app = express();
+//const express = require("express");
+//const app = express();
 
-const port = process.env.PORT || 3000;
+//const port = process.env.PORT || 3000;
 //const env = process.env.NODE_ENV || 'development';
 //const port = env === 'development' ? 3000 : process.env.PORT; 
 
@@ -26,9 +26,9 @@ async function generateFable(prompt) {
   }
 };
 
-app.get("/", (req, res) => {
-    res.send("Bot is running!");
-});
+//app.get("/", (req, res) => {
+//    res.send("Bot is running!");
+//});
 
 // Tangkap pesan /start
 bot.onText(/\/start/, (msg) => {
@@ -52,6 +52,6 @@ bot.on("message", (msg) => {
 // Set webhook (ganti YOUR_TELEGRAM_BOT_TOKEN dan YOUR_RENDER_URL)
 //bot.setWebHook(`https://YOUR_RENDER_URL/YOUR_TELEGRAM_BOT_TOKEN`);
 
-app.listen(port, () => {
-    console.log(`Bot listening on port ${port}`);
-});
+//app.listen(port, () => {
+    //console.log(`Bot listening on port ${port}`);
+//});
