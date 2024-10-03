@@ -3,7 +3,10 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 //require('dotenv').config();
 
 // Buat instance bot
-const bot = new TelegramBot(process.env.TOKEN, { polling: true });
+const token = process.env.ID_TOKEN;
+const geminiApiKey = process.env.GEMINI_API_KEY;
+
+const bot = new TelegramBot(token, { polling: true });
 
 //const vercelUrl = process.env.VERCEL_URL; 
 //const webhookUrl = `https://${vercelUrl}/${botToken}`; 
@@ -14,7 +17,7 @@ const bot = new TelegramBot(process.env.TOKEN, { polling: true });
 //};
 
 // gemini
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(geminiApiKey);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // Fungsi async untuk generate teks dengan Gemini
